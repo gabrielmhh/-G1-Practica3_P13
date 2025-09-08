@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TegSolutions Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #232526 0%, #414345 100%);
+            color: #f1f1f1;
+            min-height: 100vh;
+        }
+        .navbar {
+            background: linear-gradient(90deg, #232526 0%, #414345 100%);
+        }
+        .navbar-brand {
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .card.product-card {
+            background: #232526;
+            color: #f1f1f1;
+            border: none;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+            border-radius: 1rem;
+            transition: transform 0.2s;
+        }
+        .card.product-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+        }
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #0d6efd 0%, #00c6ff 100%);
+            border: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #00c6ff 0%, #0d6efd 100%);
+        }
+        .bg-primary {
+            background: linear-gradient(90deg, #0d6efd 0%, #232526 100%) !important;
+        }
+        .footer {
+            background: #232526;
+            color: #f1f1f1;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #444;
+        }
+        h1, h2 {
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+        .lead {
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">TegSolutions Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Aquí irán las siguientes secciones -->
+</body>
+    <!-- Hero principal -->
+    <header class="bg-primary text-white text-center py-5 mb-4">
+        <div class="container">
+            <h1 class="display-4">Bienvenido a TegSolutions Store</h1>
+            <p class="lead">Soluciones digitales para tu empresa: ERP, Desarrollo Web y Apps Móviles</p>
+        </div>
+    </header>
+
+    <!-- Catálogo de productos -->
+    <section id="catalogo" class="container mb-5">
+        <h2 class="mb-4">Catálogo de Productos</h2>
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <div class="text-center py-4">
+                        <img src="img/tegerp one.png" alt="TegERP One" class="img-fluid mb-2" style="max-height:120px; object-fit:contain;">
+                        <i class="bi bi-gear-fill" style="font-size: 3rem; color: #0d6efd;"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">TegERP One</h5>
+                        <p class="card-text">Sistema ERP para pequeñas y medianas empresas. Control centralizado, eficiente y escalable.</p>
+                        <ul>
+                            <li>Gestión de inventarios</li>
+                            <li>Facturación electrónica</li>
+                            <li>Control financiero</li>
+                            <li>Reportes en tiempo real</li>
+                        </ul>
+                        <ul class="mb-2">
+                            <li><strong>Beneficios:</strong></li>
+                            <li>Mejora la toma de decisiones con datos en tiempo real</li>
+                            <li>Reduce errores y duplicidad de información</li>
+                            <li>Escalable según el crecimiento de la empresa</li>
+                            <li>Acceso seguro desde cualquier lugar</li>
+                        </ul>
+                        <p><strong>Modelo de negocio:</strong> Suscripción mensual por usuario, escalable según crecimiento.</p>
+                        <p class="fw-bold">Precio: $500</p>
+                        <button class="btn btn-primary" onclick="agregarCarrito('TegERP One', 500)">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <div class="text-center py-4">
+                        <img src="img/tegweb1.webp" alt="TegWeb Sprint" class="img-fluid mb-2" style="max-height:120px; object-fit:contain;">
+                        <i class="bi bi-globe" style="font-size: 3rem; color: #0d6efd;"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">TegWeb Sprint</h5>
+                        <p class="card-text">Desarrollo web escalable con funcionalidades de e-commerce y soporte profesional.</p>
+                        <ul>
+                            <li>Plantillas optimizadas para SEO</li>
+                            <li>Integración de catálogos</li>
+                            <li>Carrito de compras simulado</li>
+                            <li>Soporte técnico básico</li>
+                        </ul>
+                        <ul class="mb-2">
+                            <li><strong>Beneficios:</strong></li>
+                            <li>Incrementa la visibilidad y ventas en línea</li>
+                            <li>Diseño adaptable a cualquier dispositivo</li>
+                            <li>Fácil administración de productos y pedidos</li>
+                            <li>Soporte profesional para tu negocio</li>
+                        </ul>
+                        <p><strong>Modelo de negocio:</strong> Paquetes (Básico, Profesional, Empresarial) con costos fijos y servicios incluidos.</p>
+                        <p class="fw-bold">Precio: $300</p>
+                        <button class="btn btn-primary" onclick="agregarCarrito('TegWeb Sprint', 300)">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <div class="text-center py-4">
+                        <img src="img/tegApps.png" alt="TegApps Go" class="img-fluid mb-2" style="max-height:120px; object-fit:contain;">
+                        <i class="bi bi-phone" style="font-size: 3rem; color: #0d6efd;"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">TegApps Go</h5>
+                        <p class="card-text">Apps móviles personalizables para mejorar la experiencia del cliente final.</p>
+                        <ul>
+                            <li>Catálogo en línea</li>
+                            <li>Pedidos y notificaciones push</li>
+                            <li>Estadísticas de uso</li>
+                        </ul>
+                        <ul class="mb-2">
+                            <li><strong>Beneficios:</strong></li>
+                            <li>Mejora la interacción con clientes</li>
+                            <li>Agiliza pedidos y comunicación</li>
+                            <li>Permite analizar el comportamiento de usuarios</li>
+                            <li>Actualizaciones y soporte continuo</li>
+                        </ul>
+                        <p><strong>Modelo de negocio:</strong> Pago inicial por configuración + tarifa mensual de mantenimiento y actualizaciones.</p>
+                        <p class="fw-bold">Precio: $400</p>
+                        <button class="btn btn-primary" onclick="agregarCarrito('TegApps Go', 400)">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <span>&copy; 2025 TegSolutions. Todos los derechos reservados.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS y carrito -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function agregarCarrito(producto, precio) {
+            let carrito = [];
+            try {
+                carrito = JSON.parse(localStorage.getItem('carrito'));
+                if (!Array.isArray(carrito)) carrito = [];
+            } catch(e) {
+                carrito = [];
+            }
+            carrito.push({producto, precio});
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            alert('Producto agregado al carrito.');
+        }
+        function actualizarCarrito() {
+            const lista = document.getElementById('lista-carrito');
+            lista.innerHTML = '';
+            let total = 0;
+            carrito.forEach((item, i) => {
+                total += item.precio;
+                const li = document.createElement('li');
+                li.className = 'list-group-item d-flex justify-content-between align-items-center';
+                li.textContent = item.producto + ' - $' + item.precio;
+                const btn = document.createElement('button');
+                btn.className = 'btn btn-danger btn-sm';
+                btn.textContent = 'Eliminar';
+                btn.onclick = () => { carrito.splice(i,1); actualizarCarrito(); };
+                li.appendChild(btn);
+                lista.appendChild(li);
+            });
+            document.getElementById('total-carrito').textContent = 'Total: $' + total;
+        }
+        function confirmarCompra() {
+            if(carrito.length === 0) {
+                document.getElementById('compra-confirmada').textContent = 'El carrito está vacío.';
+            } else {
+                document.getElementById('compra-confirmada').textContent = '¡Compra confirmada! Gracias por confiar en TegSolutions.';
+                carrito = [];
+                actualizarCarrito();
+            }
+        }
+    </script>
+</body>
+</body>
+</body>
+</html>
